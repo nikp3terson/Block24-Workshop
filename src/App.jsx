@@ -3,13 +3,18 @@ import { puppyList } from './data'
 import './App.css'
 
 function App() {
-  const [puppies, setPuppies] = useState(puppyList)
-  console.log("puppyList: ", puppyList)
+  const [puppies, setPuppies] = useState(puppyList);
+  const [featPupID, setFeatPupId] = useState(null);
+  // console.log("puppyList: ", puppyList)
+  function handleClick() {
+
+  }
+
   return (
     <div className='App'>
       {
         puppies.map((puppy) => {
-          return <p key={puppy.id}>{puppy.name}</p>
+          return <p onClick={handleClick} key={puppy.id}>{puppy.name}</p>
         })
       }
     </div>
